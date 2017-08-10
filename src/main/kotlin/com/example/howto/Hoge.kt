@@ -1,7 +1,13 @@
 package com.example.howto
 
-class Hoge(var id: Int? = null, var value: String? = null) {
-    override fun toString(): String {
-        return "Hoge [id=$id, value=$value]"
-    }
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
+
+@Entity(name = "hoge")
+class Hoge(@Id
+           @GeneratedValue(strategy = GenerationType.AUTO) var id: Int? = null,
+           var value: String? = null) {
+
 }
