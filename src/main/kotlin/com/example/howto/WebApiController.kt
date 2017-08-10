@@ -12,4 +12,10 @@ class WebApiController {
     fun method1() {
         throw MyException("test exception")
     }
+
+    @RequestMapping(value="/null", method = arrayOf(RequestMethod.GET))
+    fun method2() {
+        throw NullPointerException("test exception")
+    }
+
 }
